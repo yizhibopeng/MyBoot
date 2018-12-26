@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.sysyu.cmis.dao.TestMapper">
+
+    <resultMap id = "result" type = "com.sysyu.cmis.bean.Order">
+        <result property = "drug_id" column = "drug_id"/>
+        <result property = "drug_name" column = "drug_name"/>
+        <result property = "drug_spec" column = "drug_spec"/>
+        <result property = "manufactory" column = "manufactory"/>
+    </resultMap>
+    <select id = "findOrderList" resultMap = "result">
+        SELECT * FROM drug_info;
+    </select>
+</mapper>

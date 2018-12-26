@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+</head>
+<body>
+<h2>列表</h2>
+<div>
+    <ul>
+        <li  th:each="order:${orders}">
+            <span th:text="${order.drug_id}"></span>-
+            <span th:text="${order.drug_name}"></span>-
+            <span th:text="${order.drug_spec}"></span>-
+            <span th:text="${order.manufactory}"></span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
