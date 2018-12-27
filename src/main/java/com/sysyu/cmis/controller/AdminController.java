@@ -4,10 +4,7 @@ import com.sysyu.cmis.bean.Order;
 import com.sysyu.cmis.service.TestService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -18,7 +15,6 @@ import java.util.Map;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
-
     @Resource
     private TestService testService;
 
