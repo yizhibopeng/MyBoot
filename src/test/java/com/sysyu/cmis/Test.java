@@ -1,8 +1,7 @@
 package com.sysyu.cmis;
 
-import org.springframework.boot.origin.SystemEnvironmentOrigin;
-
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Test {
     public static void main(String[] args)
@@ -17,5 +16,9 @@ public class Test {
         System.out.println(a.subtract(b));
         System.out.println(a.multiply(b));
         System.out.println(a.divide(b));
+        BigDecimal c = new BigDecimal("10");
+        BigDecimal d = new BigDecimal("3");
+        System.out.println(c.divide(d,3, RoundingMode.HALF_UP));
+
     }
 }
