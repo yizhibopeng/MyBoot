@@ -1,0 +1,19 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  thymeleaf:
+    cache: false
+  messages:
+    basename: i18n.login
+  mvc:
+    date-format: yyyy-MM-dd
+  datasource:
+    url: jdbc:mysql://localhost:3306/hkcdb2?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: qq1223
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.sysyu.cmis.bean
+  configuration:
+    map-underscore-to-camel-case: true
