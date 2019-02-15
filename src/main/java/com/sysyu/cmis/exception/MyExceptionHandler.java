@@ -1,4 +1,4 @@
-package com.sysyu.cmis.controller;
+package com.sysyu.cmis.exception;
 
 import com.sysyu.cmis.exception.UserNotExistException;
 import org.springframework.web.bind.annotation.ControllerAdvice;

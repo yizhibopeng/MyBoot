@@ -3,6 +3,8 @@ package com.sysyu.cmis.bean;
 import lombok.Data;
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
+
 /**
  * @author yupeng
  * @description
@@ -10,7 +12,7 @@ import org.apache.ibatis.type.Alias;
  */
 @Alias("user_list")
 @Data
-public class User {
+public class User implements Serializable {
     private Long id;
     private String userId;
     private String userName;

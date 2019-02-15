@@ -18,6 +18,7 @@ public class Test {
         System.out.println(a.divide(b));
         BigDecimal c = new BigDecimal("10");
         BigDecimal d = new BigDecimal("3");
+        System.out.println("d.setScale(2)="+d.setScale(2));
         System.out.println(c.divide(d,3, RoundingMode.HALF_UP));
         System.out.println(String.format("拼接字符串：c=%s,d=%s",c,d));
 

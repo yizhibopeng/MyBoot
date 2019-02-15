@@ -25,10 +25,16 @@ public class LoginController {
             return "redirect:/main.html";
         }else{
             //登陆失败
-
             map.put("msg","用户名密码错误");
             return  "login";
         }
-
+    }
+    @GetMapping(value="/logout")
+    public String out(HttpSession session){
+        if(session!=null){
+            session.removeAttribute("loginUser");//从当前session中删除用户信息
+            session.invalidate();//关闭session
+        }
+        return "redirect:/index.html";
     }
 }

@@ -13,7 +13,23 @@ spring:
     username: root
     password: qq1223
     driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 1
+    host: 192.168.234.129
+    port: 6379
+    password: qq1223
+    pool:
+      max-active: 8
+      max-wait: 1
+      max-idle: 8
+      min-idle: 0
+    timeout: 3000
 mybatis:
   type-aliases-package: com.sysyu.cmis.bean
   configuration:
     map-underscore-to-camel-case: true
+logging:
+  level:
+    #显示sql语句
+    com.sysyu.cmis.dao: DEBUG
+# redis配置，以下有默认配置的也可以使用默认配置
